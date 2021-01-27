@@ -1,0 +1,9 @@
+.title {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.jumbotron {
+    background-image: url("assets/mountains.jpg");
+    background-size: cover;
+}
