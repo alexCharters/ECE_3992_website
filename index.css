@@ -45,4 +45,23 @@
     display: flex;
     justify-items: center;
     align-items: center;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.pointer {
+    width: 50%;
+    height: auto;
+    transform: rotateZ(350deg) scaleX(1);
+}
+
+.wow {
+    margin-left: -26%;
+    margin-bottom: -25%;
+    display: flex;
+}
+
+.wow h3 {
+    font-weight: 700;
+    color: white;
 }
