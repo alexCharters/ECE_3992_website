@@ -1,3 +1,29 @@
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Roboto Mono', monospace;
+font-family: 'Titillium Web', sans-serif; */
+
+@font-face {
+    font-family: "8bitlim";
+    src: url('assets/8bitlim.ttf');
+}
+
+body {
+    margin-top: -17px;
+}
+
+h2 {
+    font-weight: 700;
+}
+
+h2,
+h4 {
+    font-family: 'Roboto Mono', monospace;
+}
+
+h3 {
+    font-family: 'Titillium Web', sans-serif;
+}
+
 .title {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
@@ -5,29 +31,35 @@
 
 @keyframes slideInFromAbove {
     0% {
-      transform: translateY(-300%);
-      opacity: 0;
+        transform: translateY(-300%);
+        opacity: 0;
     }
     100% {
-      transform: translateY(0);
-      opacity: 1;
+        transform: translateY(0);
+        opacity: 1;
     }
-  }
+}
 
-  @keyframes spinAndGrow {
+@keyframes spinAndGrow {
     0% {
-      opacity: 0;
-      transform: rotateZ(-300deg);
+        opacity: 0;
+        transform: rotateZ(-300deg);
     }
     100% {
-      opacity: 1;
-      transform: rotateZ(0);
+        opacity: 1;
+        transform: rotateZ(0);
     }
-  }
+}
 
-.container{
-  display: flex;
+.background {
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    position: absolute;
     color: white;
+    margin-top: 10%;
 }
 
 .container h1 {
@@ -40,25 +72,37 @@
 
 .jumbotron {
     background-image: url("assets/mountains.jpg");
+    position: relative;
     background-size: cover;
     height: 800px;
     display: flex;
     justify-items: center;
     align-items: center;
-    padding-left: 20%;
+    padding-left: 10%;
     padding-right: 20%;
-    padding-bottom: 20%;
+    padding-bottom: 25%;
+    margin-top: -28px;
+    z-index: 0;
 }
 
 .header {
-  animation: 1s ease-out 0s 1 slideInFromAbove;
-  width: 40%;
+    animation: 1s ease-out 0s 1 slideInFromAbove;
+    width: 40%;
+    font-family: 'Montserrat', sans-serif;
+    /* text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1xpx 0 0 #000;
+    -webkit-text-stroke: 1px black; */
+}
+
+.header p {
+    font-style: italic;
 }
 
 .pointer {
     width: 30%;
     height: auto;
     transform: rotateZ(350deg) scaleX(1);
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1xpx 0 0 #000;
+    -webkit-text-stroke: 1px black;
 }
 
 .wow {
@@ -74,4 +118,129 @@
     font-weight: 700;
     color: white;
     margin-bottom: 40px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin-left: -20px;
+}
+
+.column {
+    flex: 50%;
+    max-width: 50%;
+    padding: 0;
+}
+
+.column .lang {
+    vertical-align: middle;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.lang img {
+    height: 50vh;
+    max-width: 50vw;
+}
+
+.lang h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 600%;
+    color: white;
+    text-shadow: 5px 0 0 #000, 0 -5px 0 #000, 0 5px 0 #000, -5xpx 0 0 #000;
+    -webkit-text-stroke: 5px black;
+}
+
+.education,
+.skills,
+.projects,
+.idea {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    /* background-color: white;
+    margin-top: -300px; */
+}
+
+.school_container,
+.project_container {
+    display: flex;
+    align-items: center;
+}
+
+.project_container p,
+.school_container p {
+    width: 800px;
+}
+
+.idea p {
+    width: 800px
+}
+
+.school_container img {
+    width: 12%;
+}
+
+.project_container img,
+.project_container svg {
+    width: 20%;
+}
+
+.inner_anim {
+    padding: 40px;
+    width: 100%;
+    background-color: white;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+    transform: translateY(-200px);
+    opacity: 0;
+    padding-bottom: 1rem;
+}
+
+.skills .inner_anim {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.skills .inner_anim h2,
+.skills .inner_anim h3 {
+    padding-left: 40px;
+}
+
+.skills .inner_anim {
+    padding-bottom: 0;
+}
+
+.isVisible {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.footer {
+    background-color: green;
+    width: 100%;
+    text-align: center;
+    font-size: 150%;
+    color: white;
+    padding: 30px 0;
+}
+
+@media screen and (max-width: 1000px) {
+    /* .column {
+    flex: 100%;
+    max-width: 100%;
+  } */
+    .lang img {
+        height: 25vh;
+        max-width: 50vw;
+    }
 }
