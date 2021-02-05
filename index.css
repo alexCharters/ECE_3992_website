@@ -78,6 +78,39 @@ h3 {
     font-weight: 500;
 }
 
+.top_bar_background {
+    width: 0;
+    background-color: black;
+    height: 73px;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+
+.top_bar_background.extended {
+    width: 100%;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    justify-content: center;
+}
+
+.nav .nav_button {
+    padding: 20px 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: white;
+    font-size: larger;
+}
+
 .jumbotron {
     background-image: url("assets/mountains.jpg");
     position: relative;
@@ -88,7 +121,7 @@ h3 {
     align-items: center;
     padding-left: 10%;
     padding-right: 20%;
-    padding-bottom: 25%;
+    padding-bottom: 8%;
     margin-top: -28px;
     z-index: 0;
 }
@@ -225,6 +258,7 @@ h3 {
     transform: translateY(-200px);
     opacity: 0;
     padding-bottom: 1rem;
+    z-index: -1;
 }
 
 .skills .inner_anim {
