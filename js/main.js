@@ -23,7 +23,12 @@ $(window).scroll(() => {
     handleScroll()
 })
 
+$(window).resize(() => {
+    $(".top_bar_background").css("height", $(".nav").height())
+})
+
 function handleScroll() {
+    $(".top_bar_background").css("height", $(".nav").height())
     var w = window,
         d = document,
         e = d.documentElement,
