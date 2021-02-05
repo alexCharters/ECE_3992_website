@@ -109,6 +109,15 @@ h3 {
     font-weight: 600;
     color: white;
     font-size: larger;
+    cursor: pointer;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+.nav .nav_button:hover {
+    color: gray;
 }
 
 .jumbotron {
