@@ -223,7 +223,7 @@ h3 {
     -webkit-text-stroke: 5px black;
 }
 
-.education, .skills, .projects, .idea {
+.education, .skills, .projects, .idea, .schedule {
     position: relative;
     z-index: 1;
     width: 100%;
@@ -286,6 +286,10 @@ h3 {
 .isVisible {
     transform: translateY(0px);
     opacity: 1;
+}
+
+.schedule .inner_anim {
+    padding: 0;
 }
 
 .footer {
