@@ -3,6 +3,7 @@ function getRandomInt(max) {
 }
 
 $(document).ready(() => {
+    handleScroll()
     var rellax = new Rellax('.rellax', {
         center: true
     });
@@ -14,11 +15,15 @@ $(document).ready(() => {
     $(".nav_button").click((event) => {
         $([document.documentElement, document.body]).animate({
             scrollTop: $($(event.target).data("scroll-to")).offset().top - 100
-        }, 1000, "linear");
+        }, 600, "linear");
     })
 })
 
 $(window).scroll(() => {
+    handleScroll()
+})
+
+function handleScroll() {
     var w = window,
         d = document,
         e = d.documentElement,
@@ -47,5 +52,4 @@ $(window).scroll(() => {
     else {
         $(".top_bar_background").removeClass("extended")
     }
-
-})
+}
