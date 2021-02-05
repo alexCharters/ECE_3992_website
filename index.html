@@ -6,13 +6,16 @@
 
     <title>Alexander Charters</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,800;1,800&family=Roboto+Mono&family=Titillium+Web:ital@0;1&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,800;1,800&family=Roboto+Mono&family=Titillium+Web:ital@0;1&display=swap"
+        rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="index.css" rel="stylesheet" />
 </head>
 
 <body>
     <div class="jumbotron jumbotron-fluid rellax" data-rellax-speed="-5">
+        <div class="overlay"></div>
         <div class="container rellax" data-rellax-speed="7">
             <div class="header">
                 <h1 class="display-4">Ya Boi, Alex</h1>
@@ -31,35 +34,51 @@
             <p>Like this</p>
             <img src="assets/bike.gif" alt="bike">
             <p>but cooler.</p>
-            <p>Our version will be mounted on a stepper motor and have a camera on it that tracks where a user is looking from. Based on the users viewing angle, the image on the fan will be updated so that it looks like it's 3D</p>
-            <p>This will require pretty fast SPI communication to the LED's, so I'm thinking of using a Raspberry Pi for the speed, and because it's powerful enough to handle the computer vision part.</p>
-            <p>I'm looking for people who are willing to go the extra mile and pull all nighters, if the need arises. This project has it's fair share of both hardware and software challenges, so whatever you can do it should be useful</p>
+            <p>Our version will be mounted on a stepper motor and have a camera on it that tracks where a user is
+                looking from. Based on the users viewing angle, the image on the fan will be updated so that it looks
+                like it's 3D.</p>
+            <p>This will require pretty fast SPI communication to the LED's, so I'm thinking of using a Raspberry Pi for
+                the speed, and because it's powerful enough to handle the computer vision part.</p>
+            <p>I'm looking for people who are willing to go the extra mile and pull all nighters, if the need arises.
+                This project has it's fair share of both hardware and software challenges, so whatever you can do it
+                should be useful.</p>
         </div>
     </div>
     <div class="projects outer_anim">
         <div class="inner_anim">
             <h2>Neato Things I Built</h2>
             <div class="project_container">
+                <img src="assets/piezo.jpg" alt="piezoelectrics">
                 <div>
                     <h3>Piezoelectric Shoe Charging</h3>
-                    <p>You already know that though.</p>
+                    <p>This one was probably the first project I completed in college. I made a shoe that charged up a
+                        capacitor through the use of multiple piezoelectric discs in series and parallel as well as a
+                        full bridge rectifier. The only down side was that it was super uncomfortable.</p>
                 </div>
             </div>
             <div class="project_container">
                 <img src="assets/robot.png" alt="robut">
                 <div>
                     <h3>USR Mining Robot</h3>
-                    <p>I'm the electrical lead for the Utah Student Robotics club. I manage a team of about five other electrical and computer engineers. My role is to make key decisions relating to the power and signals within the robot.</p>
+                    <p>I'm the electrical lead for the Utah Student Robotics club. I manage a team of about five other
+                        electrical and computer engineers. My role is to make key decisions relating to the power and
+                        signals within the robot.</p>
                 </div>
             </div>
             <div class="project_container">
+                <img src="assets/power_node.png" alt="">
                 <div>
-                    <h3>Gravity-Fed Watering System</h3>
-                    <p>You already know that though.</p>
+                    <h3>Power Nodes</h3>
+                    <p>I designed these boards for that robot up there. These little "nodes" can be wired inline on
+                        whatever line and display a low res measurement of both voltage and current with the on-board
+                        seven-segment displays. Their main value come in their ability to communicate over
+                        I<sup>2</sup>C. So, one master controller can request measurements from any node at any time.
+                        This provides a reliable way of monitoring our critiacla systems within the robot.</p>
                 </div>
             </div>
             <div class="project_container">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="572pt" height="502pt" viewBox="0.00 0.00 572.33 501.60">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="572pt"
+                    height="502pt" viewBox="0.00 0.00 572.33 501.60">
                     <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 497.6)">
                         <title>NeuralNetwork</title>
                         <polygon fill="#ffffff" stroke="transparent"
@@ -325,20 +344,37 @@
                 </svg>
                 <div>
                     <h3>Neuro-Evolution of Augmenting Topologies (NEAT) Library</h3>
+                    <p>Two years ago, I spent my winter break making this. It's a C# library for an evolution-based
+                        machine learning algorithm that has a really long and cool-sounding name. I'm not claiming it
+                        that it's the best library for this particular algorithm, but </p>
                     <p><a href="https://github.com/alexCharters/NEAT-Library">Github repo</a></p>
                 </div>
             </div>
             <div class="project_container">
+                <img src="assets/spectrogram.png" alt="spectrogram">
                 <div>
                     <h3>Using CNN's for Identifying Mining Material</h3>
+                    <p>This cool piece of python code takes audio input from a contact microphone that's attached near
+                        the digging mechanism of the Utah Student Robotics team's mining robot. It then classifies these
+                        sounds as either digging BP-1 (fine regolith simulant), BP-2 (course lunar ice simulant), or
+                        nothing at all. It does so by turning the sound into a spectrogram and performing convolutions
+                        on
+                        the image and feeding the result to a neural network along with information of the sound such as
+                        average pitch. (This code was done for a hackathon, so it's fairly messy)</p>
                     <p>
                         <a href="https://github.com/alexCharters/Diggatron_2000">Github repo</a>
                     </p>
                 </div>
             </div>
             <div class="project_container">
-                <h3>Topological and Building STL Generator</h3>
-                <p>You already know that though.</p>
+                <img src="assets/sagrada.png" alt="sagrada familia">
+                <div>
+                    <h3>Topological and Building STL Generator</h3>
+                    <p>Another fun hackathon project. On this one, a friend and I used Unity and some Google API's to
+                        get the topgraphical and building data for an area around a given set of latitude and longitude
+                        coords. After adjusting things such as exaggerated building size, and toggling buildings on and
+                        off, you could export the result to a stl format that could then be 3D printed.</p>
+                </div>
             </div>
         </div>
     </div>
@@ -363,8 +399,10 @@
                 <div class="small_content">
                     <h3>Northrop Grumman</h3>
                     <h4>Software Engineering Intern</h4>
-                    <p>I built a front and backend database tool for the baseline conformance team. This included import and visualization tools to streamline the work they were doing.</p>
-                    <p>It was designed around a graph database rather than the traditional relational database, which allowed it to be easily scalable and shortened deployment to three months</p>
+                    <p>I built a front and backend database tool for the baseline conformance team. This included import
+                        and visualization tools to streamline the work they were doing.</p>
+                    <p>It was designed around a graph database rather than the traditional relational database, which
+                        allowed it to be easily scalable and shortened deployment to three months</p>
                 </div>
             </div>
             <div class="school_container">
@@ -372,7 +410,8 @@
                 <div class="small_content">
                     <h3>Shape Security</h3>
                     <h4>Security Operations Center Intern</h4>
-                    <p>I analyzed a lot of data looking for characteristics of different bots that were attempting credential stuffing and scraping on client's sites.</p>
+                    <p>I analyzed a lot of data looking for characteristics of different bots that were attempting
+                        credential stuffing and scraping on client's sites.</p>
                     <p>I also wrote some scrapers myself. You know, to make sure our algorithms were working ;)</p>
                 </div>
             </div>

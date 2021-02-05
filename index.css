@@ -15,8 +15,7 @@ h2 {
     font-weight: 700;
 }
 
-h2,
-h4 {
+h2, h4 {
     font-family: 'Roboto Mono', monospace;
 }
 
@@ -48,6 +47,15 @@ h3 {
     100% {
         opacity: 1;
         transform: rotateZ(0);
+    }
+}
+
+@keyframes darkenBackground {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.7;
     }
 }
 
@@ -83,6 +91,18 @@ h3 {
     padding-bottom: 25%;
     margin-top: -28px;
     z-index: 0;
+}
+
+.overlay {
+    animation-fill-mode: forwards;
+    animation: 1s ease-out darkenBackground;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    opacity: 0.7;
 }
 
 .header {
@@ -161,10 +181,7 @@ h3 {
     -webkit-text-stroke: 5px black;
 }
 
-.education,
-.skills,
-.projects,
-.idea {
+.education, .skills, .projects, .idea {
     position: relative;
     z-index: 1;
     width: 100%;
@@ -172,28 +189,29 @@ h3 {
     margin-top: -300px; */
 }
 
-.school_container,
-.project_container {
+.school_container, .project_container {
     display: flex;
     align-items: center;
 }
 
-.project_container p,
-.school_container p {
-    width: 800px;
+.school_container div, .project_container div {
+    margin-left: 20px;
 }
 
-.idea p {
-    width: 800px
+.project_container p, .school_container p, .idea p {
+    max-width: 800px;
 }
 
 .school_container img {
     width: 12%;
+    min-width: 300px;
+    height: auto;
 }
 
-.project_container img,
-.project_container svg {
+.project_container img, .project_container svg {
     width: 20%;
+    min-width: 300px;
+    height: auto;
 }
 
 .inner_anim {
@@ -214,8 +232,7 @@ h3 {
     padding-right: 0px;
 }
 
-.skills .inner_anim h2,
-.skills .inner_anim h3 {
+.skills .inner_anim h2, .skills .inner_anim h3 {
     padding-left: 40px;
 }
 
